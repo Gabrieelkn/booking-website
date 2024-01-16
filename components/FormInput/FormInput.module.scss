@@ -1,0 +1,44 @@
+@use "../../utills/variables" as *;
+
+.form_div {
+    @include flexStartColumn;
+    width: 100%;
+}
+
+.label {
+    padding: .3rem .3rem;
+}
+
+.input {
+    padding: 1rem .3rem;
+    border-radius: 10px;
+    border: 1px solid rgb(210, 209, 209);
+    width: 100%;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.error {
+    color: red;
+    display: none;
+    width: 100%;
+    padding: 0 .3rem;
+}
+
+.error_input {
+    border-color: red;
+}
+
+
+.input:invalid[focused="true"] {
+    border: 1px solid red;
+}
+
+.input:invalid[focused="true"]~.error {
+    display: block;
+}

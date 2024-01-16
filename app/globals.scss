@@ -1,6 +1,5 @@
-/* Color */
-/* Font */
-/* Breakpoints */
+@use "../utills/variables" as*;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -17,7 +16,7 @@ body {
 h3,
 h4,
 h5 {
-  padding-top: 0.5rem;
+  padding-top: .5rem;
 }
 
 a {
@@ -28,13 +27,13 @@ a {
 h1 {
   font-size: 80px;
   text-transform: uppercase;
-  color: #273043;
+  color: $mainColor;
 }
 
 h2 {
   font-size: 40px;
   text-transform: uppercase;
-  color: #273043;
+  color: $mainColor;
   text-align: center;
 }
 
@@ -50,40 +49,44 @@ code {
 ul,
 ol {
   list-style-position: inside;
-  padding-top: 0.5rem;
+  padding-top: .5rem;
 }
+
 
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 38px;
   }
+
   h2 {
     font-size: 28px;
   }
+
   h3 {
     font-size: 20px;
   }
+
   p,
   code {
     font-size: 16px;
   }
+
   input,
   select,
   textarea {
     font-size: 16px !important;
   }
 }
+
 .container {
-  width: 95%;
-  max-width: 1200px;
-  margin: auto;
+  @include container;
   min-height: 100vh;
-}
-@media (min-width: 1024px) {
-  .container {
+
+  @media(min-width: $laptop) {
     padding-top: 5rem;
   }
 }
+
 
 /* Loader */
 .loader {
@@ -92,23 +95,30 @@ ol {
   background-color: rebeccapurple;
   aspect-ratio: 2;
   --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
-  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
-  background-size: 33.3333333333% 50%;
+  background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
   animation: l3 1s infinite linear;
 }
 
 @keyframes l3 {
   20% {
-    background-position: 0% 0%, 50% 50%, 100% 50%;
+    background-position: 0% 0%, 50% 50%, 100% 50%
   }
+
   40% {
-    background-position: 0% 100%, 50% 0%, 100% 50%;
+    background-position: 0% 100%, 50% 0%, 100% 50%
   }
+
   60% {
-    background-position: 0% 50%, 50% 100%, 100% 0%;
+    background-position: 0% 50%, 50% 100%, 100% 0%
   }
+
   80% {
-    background-position: 0% 50%, 50% 50%, 100% 100%;
+    background-position: 0% 50%, 50% 50%, 100% 100%
   }
 }
-/* Loader *//*# sourceMappingURL=globals.css.map */
+
+/* Loader */

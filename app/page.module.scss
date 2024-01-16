@@ -1,6 +1,5 @@
-/* Color */
-/* Font */
-/* Breakpoints */
+@use "../utills/variables" as*;
+
 .root {
   width: 95%;
   margin: auto;
@@ -22,31 +21,30 @@
   height: 100vh;
   max-height: 3000px;
   margin-bottom: 100px;
-}
-@media screen and (min-width: 1024px) {
-  .main .main {
-    background-attachment: fixed;
+
+  @media screen and (min-width:$laptop) {
+    .main {
+      background-attachment: fixed;
+    }
   }
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexCenterColumn;
   gap: 3rem;
-}
-.overlay h1 {
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  color: #eff6ee;
-}
-@media screen and (min-width: 1024px) {
-  .overlay h1 {
-    width: 80%;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+
+    @media screen and (min-width:$laptop) {
+      width: 80%;
+    }
+
   }
 }
 
@@ -64,7 +62,7 @@
   text-transform: uppercase;
   display: grid;
   place-items: center;
-  row-gap: 0.5rem;
+  row-gap: .5rem;
 }
 
 .image {
@@ -73,17 +71,18 @@
 }
 
 .button {
-  background-color: #eff6ee;
+  background-color: $white;
   padding: 1rem;
   border-radius: 10px;
   width: 250px;
   text-align: center;
-  color: #273043;
-  transition: all 0.3s ease-in-out;
+  color: $mainColor;
+  transition: all .3s ease-in-out;
   margin-top: 1rem;
+
+  &:hover {
+    background-color: $gray;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+  }
 }
-.button:hover {
-  background-color: #9197ae;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}/*# sourceMappingURL=page.module.css.map */

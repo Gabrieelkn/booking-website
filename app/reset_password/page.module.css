@@ -1,0 +1,61 @@
+/* Color */
+/* Font */
+/* Breakpoints */
+.body {
+  display: grid;
+  place-items: center;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10vh;
+  row-gap: 1rem;
+  position: relative;
+}
+.body i {
+  color: #9197ae;
+}
+
+.form {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  row-gap: 1rem;
+}
+
+.button {
+  border-radius: 50px;
+  background-color: #273043;
+  border: none;
+  width: 45%;
+  padding: 0.8rem;
+  min-width: 150px;
+  max-width: 200px;
+  font-size: large;
+  transition: all 0.5s ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #9197ae;
+  color: #273043;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal {
+  background-color: #9197ae;
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: #273043;
+  position: absolute;
+  display: none;
+  place-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.showModal {
+  display: grid;
+  transition: all 0.3s ease-in-out;
+}/*# sourceMappingURL=page.module.css.map */

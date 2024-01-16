@@ -1,0 +1,6 @@
+.container {
+  margin: auto;
+  width: 95%;
+  max-width: 1200px;
+  display: grid;
+}

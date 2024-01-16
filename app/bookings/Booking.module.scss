@@ -1,0 +1,112 @@
+@use "../../utills/variables" as*;
+
+.booking {
+    width: 100%;
+    gap: 1rem;
+}
+
+.checkDate,
+.button {
+    background-color: $white;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    color: $mainColor;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $gray;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.wrapper {
+    margin-top: 10vh;
+    @include flexCenterColumn;
+    gap: 1rem;
+    margin: auto;
+    width: 100%;
+    min-height: 90vh;
+
+}
+
+.rooms {
+    width: 95%;
+    margin: auto;
+
+    h2 {
+        margin-bottom: 50px
+    }
+
+
+}
+
+.room {
+    @include flexStartColumn;
+    margin-bottom: 100px;
+    border-radius: 10px;
+
+    @media screen and (min-width:$laptop) {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $white;
+    }
+}
+
+.text {
+    line-height: 1.1;
+
+    @media screen and (min-width:$laptop) {
+        width: 35%;
+    }
+
+    i {
+        color: green;
+    }
+}
+
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+    @media screen and (min-width:$laptop) {
+        width: 55%;
+    }
+}
+
+.facilities {
+    list-style: none;
+
+    @media screen and (min-width:$laptop) {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 1rem;
+    }
+
+    li {
+        &:before {
+            content: '✓';
+            margin-right: 5px; // Adjust the margin as needed
+        }
+    }
+}
+
+.bookingButton {
+    margin: 20px auto auto auto;
+    padding: .5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: $mainColor;
+    color: $white;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $gray;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    }
+}

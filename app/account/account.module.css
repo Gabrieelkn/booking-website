@@ -1,0 +1,86 @@
+/* Color */
+/* Font */
+/* Breakpoints */
+.user_dashboard {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: min(6vw, 1rem);
+  margin-top: 10vh;
+}
+@media (min-width: 1024px) {
+  .user_dashboard {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.profile_links {
+  width: 90%;
+  padding: 0.5rem;
+  line-height: 2;
+}
+@media (min-width: 1024px) {
+  .profile_links {
+    min-height: 100vh;
+    width: 20vw;
+  }
+}
+.profile_links a {
+  text-decoration: none;
+  color: #273043;
+}
+.profile_links a:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: #273043;
+}
+
+.accordion_title {
+  width: -moz-max-content;
+  width: max-content;
+}
+.accordion_title:hover {
+  cursor: pointer;
+}
+
+.logout_btn {
+  background-color: #9197ae;
+  border-radius: 10px;
+  padding: 0.2rem;
+  border: none;
+  font-size: min(6vw, 1rem);
+  color: #273043;
+}
+.logout_btn:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.accordion_content {
+  width: 100%;
+  border-radius: 10px;
+  min-height: 50vh;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+@media (min-width: 1024px) {
+  .accordion_content {
+    min-height: 100vh;
+    width: 75vw;
+  }
+}
+
+.active_link {
+  color: #273043;
+}/*# sourceMappingURL=account.module.css.map */

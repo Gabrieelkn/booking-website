@@ -1,0 +1,108 @@
+@use "../../utills/variables" as*;
+
+.hamburger {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media(min-width: $laptop) {
+        display: none;
+    }
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    color: $mainColor;
+}
+
+.nav {
+    background-color: $white;
+    position: absolute;
+    width: 100vw;
+    top: 100%;
+    height: 90vh;
+    left: -3vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(-1000px);
+    transition: all .5s ease-in-out;
+    z-index: 99;
+    opacity: 0;
+    color: $mainColor;
+
+    @media(min-width: $laptop) {
+        position: static;
+        transition: none;
+        transform: translateX(0);
+        z-index: 0;
+        width: 80%;
+        height: 10vh;
+        box-shadow: none;
+        opacity: 1;
+    }
+
+    ul {
+        list-style: none;
+        height: 50%;
+        gap: .5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: .5rem;
+
+        @media(min-width: $laptop) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+            height: 100%;
+            padding-bottom: 0;
+        }
+    }
+
+    li {
+        width: 100%;
+        text-align: start;
+        padding: .5rem;
+
+
+        @media(min-width: $laptop) {
+            border: none;
+            text-align: center;
+        }
+    }
+
+
+    a {
+        text-decoration: none;
+        color: $mainColor;
+        font-weight: 600;
+        position: relative;
+
+
+        &:hover {
+            cursor: pointer;
+            color: $mainColor;
+        }
+    }
+}
+
+.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}

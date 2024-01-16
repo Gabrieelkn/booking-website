@@ -1,0 +1,47 @@
+@use "../../utills/variables" as*;
+
+.body {
+    display: grid;
+    place-items: center;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10vh;
+    row-gap: 1rem;
+    position: relative;
+
+    i {
+        color: $gray;
+    }
+}
+
+.form {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    row-gap: 1rem;
+}
+
+.button {
+    @include button
+}
+
+.modal {
+    background-color: $gray;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    padding: .5rem;
+    color: $mainColor;
+    position: absolute;
+    display: none;
+    place-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.showModal {
+    display: grid;
+    transition: all .3s ease-in-out;
+}

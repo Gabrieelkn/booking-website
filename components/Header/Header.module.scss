@@ -1,0 +1,68 @@
+@use "../../utills/variables" as*;
+
+.header {
+    width: 100%;
+    min-height: 50px;
+    height: 10vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: $white;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    transition: all .3s ease-in-out
+}
+
+.active {
+    height: 8vh;
+    transition: all .3s ease-in-out
+}
+
+.container {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+    order: 1;
+
+    @media screen and (min-width:$laptop) {
+        order: 0;
+    }
+}
+
+.header_buttons {
+    width: min-content;
+    display: flex;
+    width: 100px;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    order: 2;
+}
+
+.icon_wrapper {
+    height: 35px;
+    width: 35px;
+    display: grid;
+    border: none;
+    place-items: center;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.icon {
+    width: 30px;
+    color: $mainColor;
+    height: 30px;
+}

@@ -1,0 +1,66 @@
+@use "../../utills/variables" as*;
+
+.login {
+    display: grid;
+    place-items: center;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    row-gap: 2rem;
+    padding-top: 15vh;
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    place-items: center;
+    row-gap: 2rem;
+}
+
+.form_div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+        padding: .5rem .3rem;
+        color: $mainColor;
+    }
+}
+
+.input {
+    padding: 1rem .3rem;
+    border-radius: 10px;
+    border: 1px solid rgb(210, 209, 209);
+    width: 100%;
+}
+
+.login_btn {
+    @include button;
+    width: 100%;
+    height: 7.5vh;
+    max-width: 400px;
+    padding: .5rem;
+    color: $white;
+}
+
+
+.buttons_wrapper {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    row-gap: 1rem;
+}
+
+.resset_password {
+    width: 100%;
+    text-align: end;
+
+    a {
+        text-decoration: none;
+        color: $mainColor;
+    }
+}

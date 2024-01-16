@@ -1,0 +1,50 @@
+@use "../../utills/variables" as*;
+
+.facilities {
+    min-height: 50vh;
+    width: 100%;
+    text-align: center
+}
+
+.wrapper {
+    @include flexCenterColumn;
+    gap: 1rem;
+    margin-top: 50px;
+
+    @media screen and (min-width:$tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    @media screen and (min-width:$laptop) {
+        justify-content: space-between;
+    }
+}
+
+.facility {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray;
+    border-radius: 10px;
+    width: 200px;
+    gap: .5rem;
+    padding: 1rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        transform: scale(0.9);
+        transition: all .3s ease-in-out;
+    }
+
+    @media screen and (min-width:$tablet) {
+        width: 400px;
+        padding: 2rem;
+    }
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

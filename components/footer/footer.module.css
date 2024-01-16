@@ -1,0 +1,11 @@
+/* Color */
+/* Font */
+/* Breakpoints */
+.footer {
+  background-color: #273043;
+  margin-top: 200px;
+  min-height: 5vh;
+  display: grid;
+  place-items: center;
+  color: #eff6ee;
+}/*# sourceMappingURL=footer.module.css.map */

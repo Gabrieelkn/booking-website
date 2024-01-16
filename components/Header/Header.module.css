@@ -1,0 +1,72 @@
+/* Color */
+/* Font */
+/* Breakpoints */
+.header {
+  width: 100%;
+  min-height: 50px;
+  height: 10vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #eff6ee;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  height: 8vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  order: 1;
+}
+@media screen and (min-width: 1024px) {
+  .logo {
+    order: 0;
+  }
+}
+
+.header_buttons {
+  width: -moz-min-content;
+  width: min-content;
+  display: flex;
+  width: 100px;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  order: 2;
+}
+
+.icon_wrapper {
+  height: 35px;
+  width: 35px;
+  display: grid;
+  border: none;
+  place-items: center;
+  background-color: transparent;
+}
+.icon_wrapper:hover {
+  cursor: pointer;
+}
+
+.icon {
+  width: 30px;
+  color: #273043;
+  height: 30px;
+}/*# sourceMappingURL=Header.module.css.map */

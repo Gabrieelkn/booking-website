@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* Color */
+/* Font */
+/* Breakpoints */
+.rooms {
+  width: 100%;
+}
+.rooms h2 {
+  margin-bottom: 50px;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 100px;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .room {
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #eff6ee;
+  }
+}
+
+.text {
+  line-height: 1.1;
+}
+@media screen and (min-width: 1024px) {
+  .text {
+    width: 35%;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .image {
+    width: 55%;
+  }
+}
+
+.facilities {
+  list-style: none;
+}
+@media screen and (min-width: 1024px) {
+  .facilities {
+    display: grid;
+    grid-template-columns: auto auto;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+}
+.facilities li:before {
+  content: "✓";
+  margin-right: 5px;
+}/*# sourceMappingURL=Rooms.module.css.map */

@@ -1,0 +1,53 @@
+/* Color */
+/* Font */
+/* Breakpoints */
+.booking {
+  margin-top: 15vh;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  row-gap: 1rem;
+}
+
+.box {
+  background-color: #9197ae;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.4rem;
+  width: 95%;
+  line-height: 2;
+  max-width: 400px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.box h3 {
+  padding-bottom: 1rem;
+}
+
+.button {
+  border-radius: 50px;
+  background-color: #273043;
+  border: none;
+  width: 45%;
+  padding: 0.8rem;
+  min-width: 150px;
+  max-width: 200px;
+  font-size: large;
+  transition: all 0.5s ease-in-out;
+  width: 95%;
+  height: 7.5vh;
+  max-width: 300px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #eff6ee;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #9197ae;
+  color: #273043;
+  transition: all 0.5s ease-in-out;
+}/*# sourceMappingURL=confirm-booking.module.css.map */

@@ -1,0 +1,10 @@
+@use "../../utills/variables" as*;
+
+.footer {
+  background-color: $mainColor;
+  margin-top: 200px;
+  min-height: 5vh;
+  display: grid;
+  place-items: center;
+  color: $white;
+}

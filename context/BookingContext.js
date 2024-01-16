@@ -10,10 +10,20 @@ export function BookingProvider({ children }) {
   const [freeRooms, setFreeRooms] = useState(null);
   const [room, setRoom] = useState(false);
   const [price, setPrice] = useState("");
-  const [startDate, setStartDate] = useState(
-    localStorage.getItem("startDate") || ""
-  );
-  const [endDate, setEndDate] = useState(localStorage.getItem("endDate") || "");
+  const [startDate, setStartDate] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("startDate") || "";
+    }
+    return "";
+  });
+
+  const [endDate, setEndDate] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("endDate") || "";
+    }
+    return "";
+  });
+
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -37,10 +47,8 @@ export function BookingProvider({ children }) {
     setStartDate(format(String(date[0].startDate), "yyyy MM dd"));
     setEndDate(format(String(date[0].endDate), "yyyy MM dd"));
 
-    if (typeof window !== "undefined") {
-      localStorage.setItem("startDate", startDate);
-      localStorage.setItem("endDate", endDate);
-    }
+    localStorage.setItem("startDate", startDate);
+    localStorage.setItem("endDate", endDate);
   }, [date, endDate, startDate]);
 
   useEffect(() => {

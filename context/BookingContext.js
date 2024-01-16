@@ -37,8 +37,7 @@ export function BookingProvider({ children }) {
     setStartDate(format(String(date[0].startDate), "yyyy MM dd"));
     setEndDate(format(String(date[0].endDate), "yyyy MM dd"));
 
-    // Check if localStorage is available before using it
-    if (typeof localStorage !== "undefined") {
+    if (typeof window !== "undefined") {
       localStorage.setItem("startDate", startDate);
       localStorage.setItem("endDate", endDate);
     }

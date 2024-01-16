@@ -29,8 +29,8 @@ export default function ResetPassword() {
     <div className={styles.body}>
       <h2>Reset your password</h2>
       <i>
-        "Forgot your password? No worries! Just type in your email, and we'll
-        send you a link to reset it."
+        Forgot your password? No worries! Just type in your email, and we will
+        send you a link to reset it.
       </i>
       <form className={styles.form} onSubmit={handleResetLink}>
         <FormInput
@@ -44,8 +44,8 @@ export default function ResetPassword() {
         className={modal ? `${styles.modal} ${styles.showModal}` : styles.modal}
       >
         <p>
-          We've sent a quick check to your email. Please open it and follow the
-          instructions to complete the process. If you don't see it, don't
+          We have sent a quick check to your email. Please open it and follow
+          the instructions to complete the process. If you do not see it, do not
           forget to check your spam folder.
         </p>
       </div>

@@ -33,13 +33,15 @@ export function BookingProvider({ children }) {
   const handleDates = (item) => {
     setDate([item.selection]);
   };
-
   useEffect(() => {
     setStartDate(format(String(date[0].startDate), "yyyy MM dd"));
     setEndDate(format(String(date[0].endDate), "yyyy MM dd"));
 
-    localStorage.setItem("startDate", startDate);
-    localStorage.setItem("endDate", endDate);
+    // Check if localStorage is available before using it
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem("startDate", startDate);
+      localStorage.setItem("endDate", endDate);
+    }
   }, [date, endDate, startDate]);
 
   useEffect(() => {

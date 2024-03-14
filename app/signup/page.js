@@ -77,17 +77,6 @@ export default function NewAccount() {
     },
   ];
 
-  {
-    /*  const router = useRouter();
-  useEffect(() => {
-    if (currentUser !== null) {
-      setTimeout(() => {
-        router.replace("/cont");
-      }, 100);
-    }
-  });
- */
-  }
   return (
     <div className={styles.signup}>
       <h2>Sign up</h2>

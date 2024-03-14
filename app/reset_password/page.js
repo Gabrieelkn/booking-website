@@ -27,27 +27,33 @@ export default function ResetPassword() {
 
   return (
     <div className={styles.body}>
-      <h2>Reset your password</h2>
-      <i>
-        Forgot your password? No worries! Just type in your email, and we will
-        send you a link to reset it.
-      </i>
-      <form className={styles.form} onSubmit={handleResetLink}>
-        <FormInput
-          placeholder="Email"
-          onChange={handleEmailChange}
-          required={true}
-        />
-        <button className={styles.button}>Send</button>
-      </form>
-      <div
-        className={modal ? `${styles.modal} ${styles.showModal}` : styles.modal}
-      >
-        <p>
-          We have sent a quick check to your email. Please open it and follow
-          the instructions to complete the process. If you do not see it, do not
-          forget to check your spam folder.
-        </p>
+      <div className={styles.wrapper}>
+        <h2>Reset your password</h2>
+        <i>
+          Forgot your password? No worries! Just type in your email, and we will
+          send you a link to reset it.
+        </i>
+        <form className={styles.form} onSubmit={handleResetLink}>
+          <FormInput
+            placeholder="Email"
+            onChange={handleEmailChange}
+            required={true}
+          />
+          <button className={styles.button}>Send</button>
+        </form>
+        <div
+          className={
+            modal ? `${styles.modal} ${styles.showModal}` : styles.modal
+          }
+        >
+          <div className={styles.modalTextWrapper}>
+            <p>
+              We have sent a quick check to your email. Please open it and
+              follow the instructions to complete the process. If you do not see
+              it, do not forget to check your spam folder.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

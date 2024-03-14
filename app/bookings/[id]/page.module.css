@@ -40,11 +40,12 @@
 .login_btn {
   border-radius: 50px;
   background-color: #273043;
+  color: #eff6ee;
   border: none;
   width: 45%;
-  padding: 0.8rem;
+  padding: 0.6rem;
   min-width: 150px;
-  max-width: 200px;
+  max-width: 180px;
   font-size: large;
   transition: all 0.5s ease-in-out;
   width: 100%;

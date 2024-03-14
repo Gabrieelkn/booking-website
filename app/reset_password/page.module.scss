@@ -6,6 +6,7 @@
     width: 90%;
     max-width: 400px;
     margin: auto;
+    min-height: 100vh;
     margin-top: 10vh;
     row-gap: 1rem;
     position: relative;
@@ -27,11 +28,9 @@
 }
 
 .modal {
-    background-color: $gray;
-    width: 300px;
-    height: 250px;
-    border-radius: 10px;
-    padding: .5rem;
+    background-color: rgba(0, 0, 0, 0.699);
+    width: 100vw;
+    height: 100vh;
     color: $mainColor;
     position: absolute;
     display: none;
@@ -39,6 +38,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.modalTextWrapper {
+    width: 95%;
+    background-color: $gray;
+    max-width: 450px;
+    border-radius: 10px;
+    padding: .5rem;
+
 }
 
 .showModal {

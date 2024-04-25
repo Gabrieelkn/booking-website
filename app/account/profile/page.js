@@ -21,8 +21,6 @@ export default function UserInfo() {
     password: "",
   });
 
-  console.log(currentUser);
-
   useEffect(() => {
     setEditValues(currentUser);
   }, [currentUser]);
@@ -96,7 +94,12 @@ export default function UserInfo() {
             className={styles.user_data_div}
             key={currentUser.id ? currentUser.id : currentUser.email}
           >
-            {editingEmail ? (
+            <UserBoard
+              currentUser={currentUser}
+              setEditingEmail={setEditingEmail}
+              setEditingPassword={setEditingPassword}
+            />
+            {editingEmail && (
               <EmailForm
                 handleSaveEmail={handleSaveEmail}
                 inputs={emailInput}
@@ -104,28 +107,6 @@ export default function UserInfo() {
                 setEditingEmail={setEditingEmail}
                 editValues={editValues}
               />
-            ) : (
-              <>
-                <div className={styles.emailButtonWrapper}>
-                  <p>Email: {currentUser.email}</p>
-                  <button
-                    className={styles.editEmailBtn}
-                    onClick={() => {
-                      setEditingEmail(true);
-                    }}
-                  >
-                    <MdEdit className={styles.icon} />
-                  </button>
-                </div>
-                <button
-                  className={styles.btn}
-                  onClick={() => {
-                    setEditingPassword(true);
-                  }}
-                >
-                  Change password
-                </button>
-              </>
             )}
             {editingPassword && (
               <PasswordForm
@@ -154,18 +135,20 @@ function EmailForm({
 }) {
   return (
     <form className={styles.form} onSubmit={handleSaveEmail}>
-      {inputs.map((input) => (
-        <FormInput
-          key={input.id}
-          {...input}
-          value={editValues.email}
-          onChange={handleInputChange}
-        />
-      ))}
-      <button className={styles.btn}>Save</button>
-      <button className={styles.btn} onClick={() => setEditingEmail(false)}>
-        Cancel
-      </button>
+      <div className={styles.form_wrapper}>
+        {inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            {...input}
+            value={editValues.email}
+            onChange={handleInputChange}
+          />
+        ))}
+        <button className={styles.btn}>Save</button>
+        <button className={styles.btn} onClick={() => setEditingEmail(false)}>
+          Cancel
+        </button>
+      </div>
     </form>
   );
 }
@@ -173,23 +156,54 @@ function PasswordForm({
   handleSavePassword,
   inputs,
   handleInputChange,
-  setEditing,
+  setEditingPassword,
   editValues,
 }) {
   return (
     <form className={styles.form} onSubmit={handleSavePassword}>
-      {inputs.map((input) => (
-        <FormInput
-          key={input.id}
-          {...input}
-          value={editValues.password}
-          onChange={handleInputChange}
-        />
-      ))}
-      <button className={styles.btn}>Save</button>
-      <button className={styles.btn} onClick={() => setEditing(false)}>
-        Cancel
-      </button>
+      <div className={styles.form_wrapper}>
+        {inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            {...input}
+            value={editValues.password}
+            onChange={handleInputChange}
+          />
+        ))}
+        <button className={styles.btn}>Save</button>
+        <button
+          className={styles.btn}
+          onClick={() => setEditingPassword(false)}
+        >
+          Cancel
+        </button>
+      </div>
     </form>
+  );
+}
+
+function UserBoard({ setEditingEmail, setEditingPassword, currentUser }) {
+  return (
+    <>
+      <p>Email: {currentUser.email}</p>
+      <button
+        className={styles.editEmailBtn}
+        onClick={() => {
+          setEditingEmail(true);
+          setEditingPassword(false);
+        }}
+      >
+        Change email
+      </button>
+      <button
+        className={styles.btn}
+        onClick={() => {
+          setEditingPassword(true);
+          setEditingEmail(false);
+        }}
+      >
+        Change password
+      </button>
+    </>
   );
 }

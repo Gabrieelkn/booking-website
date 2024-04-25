@@ -6,6 +6,7 @@
   padding: 0px;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .info h3 {
   margin-bottom: 1rem;
@@ -16,7 +17,6 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: #9197ae;
   width: 90%;
   padding: 0.5rem;
   border-radius: 10px;
@@ -27,31 +27,40 @@
   }
 }
 
+.form {
+  background-color: rgba(0, 0, 0, 0.355);
+  position: fixed;
+  display: grid;
+  place-items: center;
+  bottom: 0;
+  z-index: 999999;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+}
+
+.form_wrapper {
+  width: 90%;
+  max-width: 500px;
+  padding: 1rem;
+  background-color: #B0B4C4;
+  height: 50%;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
 .emailButtonWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.btn,
 .editEmailBtn {
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  background-color: transparent;
-  border: none;
-}
-.editEmailBtn:hover {
-  cursor: pointer;
-}
-.editEmailBtn .icon {
-  width: 25px;
-  height: 25px;
-}
-
-.btn {
   border-radius: 10px;
-  background-color: #273043;
+  background-color: #020203;
   color: #eff6ee;
   border: none;
   width: 60%;
@@ -63,10 +72,11 @@
   max-width: 180px;
   display: block;
   transition: all 0.5s ease-in-out;
-  margin-top: 1rem;
+  width: 80%;
 }
-.btn:hover {
+.btn:hover,
+.editEmailBtn:hover {
   cursor: pointer;
-  background-color: #eff6ee;
+  background-color: #020203;
   transition: all 0.5s ease-in-out;
 }/*# sourceMappingURL=profile.module.css.map */

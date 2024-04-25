@@ -2,8 +2,8 @@
 /* Font */
 /* Breakpoints */
 .hamburger {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: grid;
   place-items: center;
   border: none;
@@ -23,7 +23,7 @@
   width: 35px;
   height: 35px;
   margin: auto;
-  color: #273043;
+  color: #020203;
 }
 
 .nav {
@@ -40,7 +40,7 @@
   transition: all 0.5s ease-in-out;
   z-index: 99;
   opacity: 0;
-  color: #273043;
+  color: #020203;
 }
 @media (min-width: 1024px) {
   .nav {
@@ -88,13 +88,13 @@
 }
 .nav a {
   text-decoration: none;
-  color: #273043;
+  color: #020203;
   font-weight: 600;
   position: relative;
 }
 .nav a:hover {
   cursor: pointer;
-  color: #273043;
+  color: #020203;
 }
 
 .active {

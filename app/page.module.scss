@@ -34,6 +34,8 @@
   height: 100vh;
   @include flexCenterColumn;
   gap: 3rem;
+  color: $white;
+  text-align: center;
 
   h1 {
     width: 100%;
@@ -46,28 +48,6 @@
     }
 
   }
-}
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-}
-
-.box {
-  width: 30%;
-  max-width: 200px;
-  text-transform: uppercase;
-  display: grid;
-  place-items: center;
-  row-gap: .5rem;
-}
-
-.image {
-  width: 60%;
-  height: auto;
 }
 
 .button {

@@ -37,6 +37,8 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  color: #eff6ee;
+  text-align: center;
 }
 .overlay h1 {
   width: 100%;
@@ -50,40 +52,18 @@
   }
 }
 
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-}
-
-.box {
-  width: 30%;
-  max-width: 200px;
-  text-transform: uppercase;
-  display: grid;
-  place-items: center;
-  row-gap: 0.5rem;
-}
-
-.image {
-  width: 60%;
-  height: auto;
-}
-
 .button {
   background-color: #eff6ee;
   padding: 1rem;
   border-radius: 10px;
   width: 250px;
   text-align: center;
-  color: #273043;
+  color: #020203;
   transition: all 0.3s ease-in-out;
   margin-top: 1rem;
 }
 .button:hover {
-  background-color: #9197ae;
+  background-color: #B0B4C4;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=page.module.css.map */

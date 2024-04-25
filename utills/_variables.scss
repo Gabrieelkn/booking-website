@@ -1,7 +1,7 @@
 /* Color */
-$mainColor: #273043;
+$mainColor: #020203;
 $white: #eff6ee;
-$gray: #9197ae;
+$gray: #B0B4C4;
 
 /* Font */
 $headerFont: min(9vw, 4.5rem);
@@ -30,7 +30,7 @@ $computer: 1439px;
 
     &:hover {
         cursor: pointer;
-        background-color: $white;
+        background-color: $mainColor;
 
         transition: all .5s ease-in-out;
     }

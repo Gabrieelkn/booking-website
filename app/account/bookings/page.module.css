@@ -6,7 +6,6 @@
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  position: relative;
 }
 .bookings::-webkit-scrollbar {
   display: none;
@@ -37,7 +36,7 @@
 
 .button {
   border-radius: 10px;
-  background-color: #273043;
+  background-color: #020203;
   color: #eff6ee;
   border: none;
   width: 60%;
@@ -52,17 +51,20 @@
 }
 .button:hover {
   cursor: pointer;
-  background-color: #eff6ee;
+  background-color: #020203;
   transition: all 0.5s ease-in-out;
 }
 
 .confirmModal {
   display: none;
   place-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  width: 100vw;
+  z-index: 99999;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.205);
 }
 .confirmModal .buttons {
   display: flex;
@@ -90,7 +92,7 @@
 .yesButton,
 .noButton {
   border-radius: 10px;
-  background-color: #273043;
+  background-color: #020203;
   color: #eff6ee;
   border: none;
   width: 60%;
@@ -107,13 +109,13 @@
 .yesButton:hover,
 .noButton:hover {
   cursor: pointer;
-  background-color: #eff6ee;
+  background-color: #020203;
   transition: all 0.5s ease-in-out;
 }
 .yesButton:hover,
 .noButton:hover {
-  color: #273043;
-  border: 1px solid #273043;
+  color: #020203;
+  border: 1px solid #020203;
 }
 
 .yesButton {

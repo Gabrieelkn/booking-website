@@ -15,6 +15,7 @@
   gap: 1rem;
   font-size: min(6vw, 1rem);
   margin-top: 10vh;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .user_dashboard {
@@ -24,9 +25,12 @@
 }
 
 .profile_links {
-  width: 90%;
+  width: 100%;
   padding: 0.5rem;
   line-height: 2;
+}
+.profile_links h2 {
+  text-align: start;
 }
 @media (min-width: 1024px) {
   .profile_links {
@@ -36,14 +40,14 @@
 }
 .profile_links a {
   text-decoration: none;
-  color: #273043;
+  color: #020203;
 }
 .profile_links a:hover {
   cursor: pointer;
 }
 
 .active {
-  color: #273043;
+  color: green;
 }
 
 .accordion_title {
@@ -55,12 +59,11 @@
 }
 
 .logout_btn {
-  background-color: #9197ae;
-  border-radius: 10px;
   padding: 0.2rem;
   border: none;
   font-size: min(6vw, 1rem);
-  color: #273043;
+  color: #020203;
+  background-color: transparent;
 }
 .logout_btn:hover {
   color: red;
@@ -82,5 +85,5 @@
 }
 
 .active_link {
-  color: #273043;
+  color: #020203;
 }/*# sourceMappingURL=account.module.css.map */

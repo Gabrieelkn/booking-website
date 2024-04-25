@@ -28,7 +28,7 @@
 }
 .form_div label {
   padding: 0.5rem 0.3rem;
-  color: #273043;
+  color: #020203;
 }
 
 .input {
@@ -40,7 +40,7 @@
 
 .login_btn {
   border-radius: 50px;
-  background-color: #273043;
+  background-color: #020203;
   color: #eff6ee;
   border: none;
   width: 45%;
@@ -57,8 +57,8 @@
 }
 .login_btn:hover {
   cursor: pointer;
-  background-color: #9197ae;
-  color: #273043;
+  background-color: #B0B4C4;
+  color: #020203;
   transition: all 0.5s ease-in-out;
 }
 
@@ -75,5 +75,5 @@
 }
 .resset_password a {
   text-decoration: none;
-  color: #273043;
+  color: #020203;
 }/*# sourceMappingURL=login.module.css.map */

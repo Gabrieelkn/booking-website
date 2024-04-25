@@ -14,12 +14,12 @@
   border-radius: 10px;
   width: 250px;
   text-align: center;
-  color: #273043;
+  color: #020203;
   transition: all 0.3s ease-in-out;
 }
 .checkDate:hover,
 .button:hover {
-  background-color: #9197ae;
+  background-color: #B0B4C4;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -104,12 +104,12 @@
   padding: 0.5rem;
   border-radius: 10px;
   border: none;
-  background-color: #273043;
+  background-color: #020203;
   color: #eff6ee;
   transition: all 0.3s ease-in-out;
 }
 .bookingButton:hover {
-  background-color: #9197ae;
+  background-color: #B0B4C4;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=Booking.module.css.map */

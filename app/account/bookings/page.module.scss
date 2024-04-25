@@ -5,7 +5,6 @@
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    position: relative;
 
     &::-webkit-scrollbar {
         display: none;
@@ -43,10 +42,13 @@
 .confirmModal {
     display: none;
     place-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    width: 100vw;
+    z-index: 99999;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.205);
 
     .buttons {
         display: flex;

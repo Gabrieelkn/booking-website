@@ -4,7 +4,7 @@
 .icon {
   width: 100%;
   height: 100%;
-  color: #273043;
+  color: #020203;
 }
 
 .user_box {
@@ -42,8 +42,8 @@
 }
 
 .user_btn {
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   background-color: transparent;
   border: none;
   gap: 0.4rem;
@@ -84,14 +84,14 @@
   border: none;
 }
 .user_btns button:last-child:hover {
-  color: #273043;
+  color: #020203;
   background-color: transparent;
 }
 
 .user_login_btn,
 .new_user_btn {
   border-radius: 10px;
-  background-color: #273043;
+  background-color: #020203;
   color: #eff6ee;
   border: none;
   width: 60%;
@@ -109,7 +109,7 @@
 .user_login_btn:hover,
 .new_user_btn:hover {
   cursor: pointer;
-  background-color: #eff6ee;
+  background-color: #020203;
   transition: all 0.5s ease-in-out;
 }
 
@@ -120,7 +120,7 @@
   padding: 0.5rem;
   border: none;
   border-radius: 10px;
-  color: #273043;
+  color: #020203;
 }
 .my_account_btn:hover,
 .logout_btn:hover {
@@ -130,9 +130,9 @@
 }
 
 .logout_btn {
-  background-color: #9197ae;
+  background-color: #B0B4C4;
 }
 .logout_btn:hover {
-  background-color: #9197ae;
+  background-color: #B0B4C4;
   transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=styles.module.css.map */

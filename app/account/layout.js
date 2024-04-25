@@ -10,9 +10,7 @@ import supabase from "@/utills/supabaseClient";
 const ProfileLink = ({ href, title, isActive }) => (
   <Link href={href}>
     <div
-      className={`${styles.accordion_title} ${
-        isActive ? styles.active_link : ""
-      }`}
+      className={`${styles.accordion_title} ${isActive ? styles.active : ""}`}
     >
       {title}
     </div>

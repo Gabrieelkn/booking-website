@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import supabase from "@/utills/supabaseClient";
 import { useSelector } from "react-redux";
-import { IoIosClose } from "react-icons/io";
 import Loading from "@/app/signup/loading";
 import toast from "react-hot-toast";
 

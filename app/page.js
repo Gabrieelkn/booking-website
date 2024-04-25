@@ -24,11 +24,8 @@ function Main() {
     <main className={styles.main}>
       <div className={styles.overlay}>
         <h1>Hotel boooking</h1>
-        <div className={styles.wrapper}>
-          <Box src={Drinks} text="Free drinks" />
-          <Box src={Gym} text="Gym" />
-          <Box src={Events} text="Events" />
-        </div>
+        <p>Experience the best of our hotel with these exclusive amenities</p>
+
         <CheckAvailabilityButton />
       </div>
     </main>

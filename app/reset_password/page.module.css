@@ -13,7 +13,7 @@
   position: relative;
 }
 .body i {
-  color: #9197ae;
+  color: #B0B4C4;
 }
 
 .form {
@@ -25,7 +25,7 @@
 
 .button {
   border-radius: 50px;
-  background-color: #273043;
+  background-color: #020203;
   color: #eff6ee;
   border: none;
   width: 45%;
@@ -37,8 +37,8 @@
 }
 .button:hover {
   cursor: pointer;
-  background-color: #9197ae;
-  color: #273043;
+  background-color: #B0B4C4;
+  color: #020203;
   transition: all 0.5s ease-in-out;
 }
 
@@ -46,7 +46,7 @@
   background-color: rgba(0, 0, 0, 0.699);
   width: 100vw;
   height: 100vh;
-  color: #273043;
+  color: #020203;
   position: absolute;
   display: none;
   place-items: center;
@@ -57,7 +57,7 @@
 
 .modalTextWrapper {
   width: 95%;
-  background-color: #9197ae;
+  background-color: #B0B4C4;
   max-width: 450px;
   border-radius: 10px;
   padding: 0.5rem;

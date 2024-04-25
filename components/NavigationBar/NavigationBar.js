@@ -36,6 +36,9 @@ function NavigationBar() {
           <li>
             <Link href="/about-us">About us</Link>
           </li>
+          <li>
+            <Link href="/conact-us">Contact us</Link>
+          </li>
         </ul>
       </nav>
     </>

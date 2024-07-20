@@ -51,7 +51,7 @@ export default function UserLayout({ children }) {
   return (
     <div className={styles.user_dashboard}>
       <div className={styles.profile_links}>
-        <h2>My account</h2>
+        <h3>My account</h3>
         <ProfileLink
           href="/account/profile"
           title="Profile"

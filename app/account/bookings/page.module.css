@@ -34,25 +34,39 @@
   margin-top: 0.5rem;
 }
 
-.button {
+.button,
+.yesButton,
+.noButton {
   border-radius: 10px;
-  background-color: #020203;
-  color: #eff6ee;
+  background-color: #00A6FB;
+  color: #020203;
   border: none;
-  width: 60%;
-  padding: 0.3rem;
-  min-width: -moz-max-content;
-  min-width: max-content;
-  margin: auto;
-  white-space: wrap;
-  max-width: 180px;
-  display: block;
+  width: 30%;
+  padding: 0.5rem;
+  max-width: 100px;
   transition: all 0.5s ease-in-out;
 }
-.button:hover {
+.button:hover,
+.yesButton:hover,
+.noButton:hover {
   cursor: pointer;
-  background-color: #020203;
+  background-color: #D3D3D9;
+  color: #020203;
   transition: all 0.5s ease-in-out;
+}
+
+.yesButton,
+.noButton {
+  width: 40%;
+}
+.yesButton:hover,
+.noButton:hover {
+  color: #020203;
+  border: 1px solid #020203;
+}
+
+.yesButton {
+  background-color: red;
 }
 
 .confirmModal {
@@ -62,8 +76,8 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 99999;
   height: 100vh;
+  z-index: 99999;
   background-color: rgba(0, 0, 0, 0.205);
 }
 .confirmModal .buttons {
@@ -74,50 +88,18 @@
 
 .wrapper {
   display: grid;
-  height: 50%;
   place-items: center;
+  width: 80%;
+  max-width: 300px;
+  height: 50%;
+  padding: 0.5rem;
+  margin: auto;
   background: #eff6ee;
   text-align: center;
-  width: 80%;
-  padding: 0.5rem;
   border-radius: 10px;
-  margin: auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .activeModal {
   display: grid;
-}
-
-.yesButton,
-.noButton {
-  border-radius: 10px;
-  background-color: #020203;
-  color: #eff6ee;
-  border: none;
-  width: 60%;
-  padding: 0.3rem;
-  min-width: -moz-max-content;
-  min-width: max-content;
-  margin: auto;
-  white-space: wrap;
-  max-width: 180px;
-  display: block;
-  transition: all 0.5s ease-in-out;
-  width: 40%;
-}
-.yesButton:hover,
-.noButton:hover {
-  cursor: pointer;
-  background-color: #020203;
-  transition: all 0.5s ease-in-out;
-}
-.yesButton:hover,
-.noButton:hover {
-  color: #020203;
-  border: 1px solid #020203;
-}
-
-.yesButton {
-  background-color: red;
 }/*# sourceMappingURL=page.module.css.map */

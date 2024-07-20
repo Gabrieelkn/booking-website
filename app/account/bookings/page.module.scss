@@ -1,5 +1,6 @@
 @use "../../../utills/variables" as *;
 
+
 .bookings {
     height: 100vh;
     overflow: scroll;
@@ -9,8 +10,8 @@
     &::-webkit-scrollbar {
         display: none;
     }
-
 }
+
 
 .pending {
     color: #ff6f00;
@@ -27,57 +28,24 @@
 .booking {
     margin-bottom: 1rem;
     background-color: $white;
-    padding: .4rem;
+    padding: 0.4rem;
     border-radius: 10px;
 }
+
 
 .details {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
-.button {
+
+.button,
+.yesButton,
+.noButton {
     @include small_button;
-}
-
-.confirmModal {
-    display: none;
-    place-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 99999;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.205);
-
-    .buttons {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-}
-
-.wrapper {
-    display: grid;
-    height: 50%;
-    place-items: center;
-    background: $white;
-    text-align: center;
-    width: 80%;
-    padding: 0.5rem;
-    border-radius: 10px;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.activeModal {
-    display: grid;
 }
 
 .yesButton,
 .noButton {
-    @include small_button;
     width: 40%;
 
     &:hover {
@@ -88,4 +56,41 @@
 
 .yesButton {
     background-color: red;
+}
+
+
+.confirmModal {
+    display: none;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.205);
+
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+.wrapper {
+    display: grid;
+    place-items: center;
+    width: 80%;
+    max-width: 300px;
+    height: 50%;
+    padding: 0.5rem;
+    margin: auto;
+    background: $white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.activeModal {
+    display: grid;
 }

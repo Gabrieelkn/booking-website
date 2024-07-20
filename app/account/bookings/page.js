@@ -13,10 +13,7 @@ export default function MyBookings() {
   const [modal, setModal] = useState(false);
   const [selectedBookingId, setSelectedBookingId] = useState(null);
 
-  console.log(selectedBookingId);
-
   const handleCancelBooking = async (id) => {
-    console.log(id);
     const { data, error } = await supabase
       .from("bookings")
       .update({ status: "Canceled" })

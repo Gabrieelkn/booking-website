@@ -1,7 +1,22 @@
 /* Color */
 $mainColor: #020203;
 $white: #eff6ee;
-$gray: #B0B4C4;
+
+$primaryColor: #1E1E2C;
+$secondaryColor: #3D3D4E;
+
+$accentColor1: #00A6FB;
+$accentColor2: #FB4D3D;
+
+$gray: #D3D3D9;
+$darkGray: #8C8C99;
+
+$successColor: #4CAF50;
+$warningColor: #FFC107;
+
+$backgroundColor: #121212;
+$backgroundLightColor: #FAFAFA;
+
 
 /* Font */
 $headerFont: min(9vw, 4.5rem);
@@ -14,24 +29,30 @@ $laptop: 1024px;
 $computer: 1439px;
 
 
+@mixin overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    @include flexCenterColumn;
+    gap: 3rem;
+    color: $white;
+    text-align: center;
+
+}
+
 @mixin small_button {
     border-radius: 10px;
-    background-color: $mainColor;
-    color: $white;
+    background-color: $accentColor1;
+    color: $mainColor;
     border: none;
-    width: 60%;
-    padding: .3rem;
-    min-width: max-content;
-    margin: auto;
-    white-space: wrap;
-    max-width: 180px;
-    display: block;
+    width: 30%;
+    padding: .5rem;
+    max-width: 100px;
     transition: all .5s ease-in-out;
 
     &:hover {
         cursor: pointer;
-        background-color: $mainColor;
-
+        background-color: $gray;
+        color: $mainColor;
         transition: all .5s ease-in-out;
     }
 }
@@ -39,15 +60,13 @@ $computer: 1439px;
 
 
 @mixin button {
-    border-radius: 50px;
-    background-color: $mainColor;
-    color: $white;
+    border-radius: 10px;
+    background-color: $accentColor1;
+    color: $mainColor;
     border: none;
-    width: 45%;
+    width: 50%;
     padding: .6rem;
-    min-width: 150px;
-    max-width: 180px;
-    font-size: large;
+    max-width: 150px;
     transition: all .5s ease-in-out;
 
     &:hover {

@@ -177,8 +177,8 @@
   transform: translate(-50%, 0);
   width: 18px;
   height: 2px;
-  border-radius: 2px;
-  background: #3d91ff;
+  border-radius: 0px;
+  background: #00a6fb;
 }
 
 .rdrDayToday:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span:after,
@@ -213,27 +213,27 @@
 }
 
 .rdrStartEdge {
-  border-top-left-radius: 1.042em;
-  border-bottom-left-radius: 1.042em;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
   left: 2px;
 }
 
 .rdrEndEdge {
-  border-top-right-radius: 1.042em;
-  border-bottom-right-radius: 1.042em;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   right: 2px;
 }
 
 .rdrSelected {
-  border-radius: 1.042em;
+  border-radius: 0.5em;
 }
 
 .rdrDayStartOfMonth .rdrInRange,
 .rdrDayStartOfMonth .rdrEndEdge,
 .rdrDayStartOfWeek .rdrInRange,
 .rdrDayStartOfWeek .rdrEndEdge {
-  border-top-left-radius: 1.042em;
-  border-bottom-left-radius: 1.042em;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
   left: 2px;
 }
 
@@ -241,8 +241,8 @@
 .rdrDayEndOfMonth .rdrStartEdge,
 .rdrDayEndOfWeek .rdrInRange,
 .rdrDayEndOfWeek .rdrStartEdge {
-  border-top-right-radius: 1.042em;
-  border-bottom-right-radius: 1.042em;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   right: 2px;
 }
 
@@ -250,8 +250,8 @@
 .rdrDayStartOfMonth .rdrDayEndPreview,
 .rdrDayStartOfWeek .rdrDayInPreview,
 .rdrDayStartOfWeek .rdrDayEndPreview {
-  border-top-left-radius: 1.333em;
-  border-bottom-left-radius: 1.333em;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
   border-left-width: 1px;
   left: 0px;
 }
@@ -260,8 +260,8 @@
 .rdrDayEndOfMonth .rdrDayStartPreview,
 .rdrDayEndOfWeek .rdrDayInPreview,
 .rdrDayEndOfWeek .rdrDayStartPreview {
-  border-top-right-radius: 1.333em;
-  border-bottom-right-radius: 1.333em;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   border-right-width: 1px;
   right: 0px;
 }
@@ -284,8 +284,8 @@
   border-top-width: 1px;
   border-left-width: 1px;
   border-bottom-width: 1px;
-  border-top-left-radius: 1.333em;
-  border-bottom-left-radius: 1.333em;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
   left: 0px;
 }
 
@@ -298,8 +298,8 @@
   border-top-width: 1px;
   border-right-width: 1px;
   border-bottom-width: 1px;
-  border-top-right-radius: 1.333em;
-  border-bottom-right-radius: 1.333em;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   right: 2px;
   right: 0px;
 }

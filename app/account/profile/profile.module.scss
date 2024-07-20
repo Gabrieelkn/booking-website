@@ -26,40 +26,20 @@
     }
 }
 
-.form {
-    background-color: rgba(0, 0, 0, 0.355);
-    position: fixed;
-    display: grid;
-    place-items: center;
-    bottom: 0;
-    z-index: 999999;
-    left: 0;
-    height: 100%;
-    width: 100vw;
-}
-
-.form_wrapper {
-    width: 90%;
-    max-width: 500px;
-    padding: 1rem;
+.userBoard {
     background-color: $gray;
-    height: 50%;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
-    max-width: 500px;
-
+    border-radius: 12px;
 
 }
 
-.emailButtonWrapper {
+.form {
+    height: 200px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .5rem;
 }
 
-.btn,
-.editEmailBtn {
-    @include small-button;
-    width: 80%;
+.saveBtn {
+    @include small_button;
 }

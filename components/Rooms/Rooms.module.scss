@@ -9,6 +9,7 @@
 }
 
 .room {
+    width: 100%;
     @include flexStartColumn;
     margin-bottom: 100px;
     border-radius: 10px;
@@ -52,7 +53,7 @@
     li {
         &:before {
             content: '✓';
-            margin-right: 5px; // Adjust the margin as needed
+            margin-right: 5px;
         }
     }
 }

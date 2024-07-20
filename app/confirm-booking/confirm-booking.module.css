@@ -13,7 +13,7 @@
 }
 
 .box {
-  background-color: #B0B4C4;
+  background-color: #D3D3D9;
   text-align: center;
   border-radius: 10px;
   padding: 0.4rem;
@@ -27,15 +27,13 @@
 }
 
 .button {
-  border-radius: 50px;
-  background-color: #020203;
-  color: #eff6ee;
+  border-radius: 10px;
+  background-color: #00A6FB;
+  color: #020203;
   border: none;
-  width: 45%;
+  width: 50%;
   padding: 0.6rem;
-  min-width: 150px;
-  max-width: 180px;
-  font-size: large;
+  max-width: 150px;
   transition: all 0.5s ease-in-out;
   width: 95%;
   height: 7.5vh;
@@ -48,7 +46,7 @@
 }
 .button:hover {
   cursor: pointer;
-  background-color: #B0B4C4;
+  background-color: #D3D3D9;
   color: #020203;
   transition: all 0.5s ease-in-out;
 }/*# sourceMappingURL=confirm-booking.module.css.map */

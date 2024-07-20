@@ -27,56 +27,32 @@
   }
 }
 
+.userBoard {
+  background-color: #D3D3D9;
+  border-radius: 12px;
+}
+
 .form {
-  background-color: rgba(0, 0, 0, 0.355);
-  position: fixed;
-  display: grid;
-  place-items: center;
-  bottom: 0;
-  z-index: 999999;
-  left: 0;
-  height: 100%;
-  width: 100vw;
-}
-
-.form_wrapper {
-  width: 90%;
-  max-width: 500px;
-  padding: 1rem;
-  background-color: #B0B4C4;
-  height: 50%;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  max-width: 500px;
-}
-
-.emailButtonWrapper {
+  height: 200px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5rem;
 }
 
-.btn,
-.editEmailBtn {
+.saveBtn {
   border-radius: 10px;
-  background-color: #020203;
-  color: #eff6ee;
+  background-color: #00A6FB;
+  color: #020203;
   border: none;
-  width: 60%;
-  padding: 0.3rem;
-  min-width: -moz-max-content;
-  min-width: max-content;
-  margin: auto;
-  white-space: wrap;
-  max-width: 180px;
-  display: block;
+  width: 30%;
+  padding: 0.5rem;
+  max-width: 100px;
   transition: all 0.5s ease-in-out;
-  width: 80%;
 }
-.btn:hover,
-.editEmailBtn:hover {
+.saveBtn:hover {
   cursor: pointer;
-  background-color: #020203;
+  background-color: #D3D3D9;
+  color: #020203;
   transition: all 0.5s ease-in-out;
 }/*# sourceMappingURL=profile.module.css.map */

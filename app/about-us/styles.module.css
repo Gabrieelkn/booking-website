@@ -1,0 +1,58 @@
+/* Color */
+/* Font */
+/* Breakpoints */
+.page {
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  margin-top: 10vh;
+  background-image: url(../../public/about-us.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  max-height: 3000px;
+  margin-bottom: 5rem;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  color: #eff6ee;
+  text-align: center;
+  height: inherit;
+}
+.overlay h2 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #eff6ee;
+}
+@media screen and (min-width: 1024px) {
+  .overlay h2 {
+    width: 80%;
+  }
+}
+
+.article {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+.article h3 {
+  margin-bottom: 1rem;
+}
+.article p {
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=styles.module.css.map */

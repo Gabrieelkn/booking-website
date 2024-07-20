@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 50px;
 }
 @media screen and (min-width: 767px) {
@@ -28,11 +28,18 @@
   }
 }
 
+.icon {
+  color: #00A6FB;
+  width: 30px;
+  height: 30px;
+}
+
 .facility {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #B0B4C4;
+  background-color: #eff6ee;
   border-radius: 10px;
   width: 200px;
   gap: 0.5rem;
@@ -48,9 +55,4 @@
     width: 400px;
     padding: 2rem;
   }
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
 }/*# sourceMappingURL=Facilities.module.css.map */

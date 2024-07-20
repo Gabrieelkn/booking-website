@@ -3,6 +3,8 @@
 /* Breakpoints */
 .root {
   width: 95%;
+  max-width: 1200px;
+  margin: auto;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -63,7 +65,54 @@
   margin-top: 1rem;
 }
 .button:hover {
-  background-color: #B0B4C4;
+  background-color: #D3D3D9;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.hotel {
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #eff6ee;
+  border-radius: 8px;
+}
+.hotel img {
+  width: 95%;
+  max-width: 500px;
+  height: auto;
+}
+.hotel h2 {
+  margin-bottom: 1rem;
+}
+.hotel p {
+  margin-bottom: 2rem;
+}
+.hotel .room {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+  .hotel .room {
+    justify-content: space-between;
+  }
+}
+.hotel .room .roomDescription {
+  max-width: 500px;
+}
+.hotel .room .roomDescription h3 {
+  margin-bottom: 0.5rem;
+}
+.hotel .room .roomDescription p {
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .hotel .reverse {
+    flex-direction: row-reverse;
+  }
 }/*# sourceMappingURL=page.module.css.map */

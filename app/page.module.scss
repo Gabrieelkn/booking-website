@@ -1,7 +1,7 @@
 @use "../utills/variables" as*;
 
 .root {
-  width: 95%;
+  @include container;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -30,12 +30,7 @@
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  height: 100vh;
-  @include flexCenterColumn;
-  gap: 3rem;
-  color: $white;
-  text-align: center;
+  @include overlay;
 
   h1 {
     width: 100%;
@@ -46,6 +41,7 @@
     @media screen and (min-width:$laptop) {
       width: 80%;
     }
+
 
   }
 }
@@ -64,5 +60,53 @@
     background-color: $gray;
     cursor: pointer;
     transition: all .3s ease-in-out;
+  }
+}
+
+.hotel {
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: $white;
+  border-radius: 8px;
+
+  img {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+
+
+  .room {
+    @include flexToRow;
+    margin-bottom: 2rem;
+
+    .roomDescription {
+      max-width: 500px;
+
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .reverse {
+    @media screen and (min-width:$laptop) {
+      flex-direction: row-reverse;
+    }
+
   }
 }

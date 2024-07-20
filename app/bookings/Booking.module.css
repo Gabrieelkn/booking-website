@@ -19,7 +19,7 @@
 }
 .checkDate:hover,
 .button:hover {
-  background-color: #B0B4C4;
+  background-color: #D3D3D9;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -62,6 +62,7 @@
 
 .text {
   line-height: 1.1;
+  padding: 0.5rem;
 }
 @media screen and (min-width: 1024px) {
   .text {
@@ -109,7 +110,7 @@
   transition: all 0.3s ease-in-out;
 }
 .bookingButton:hover {
-  background-color: #B0B4C4;
+  background-color: #FB4D3D;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=Booking.module.css.map */

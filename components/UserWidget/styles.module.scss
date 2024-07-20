@@ -6,37 +6,6 @@
     color: $mainColor;
 }
 
-.user_box {
-    @include flexCenterColumn;
-    position: absolute;
-    top: 105%;
-    right: 0;
-    z-index: 999999999999;
-    gap: 0.5rem;
-    width: 210px;
-    min-height: 15vh;
-    padding: .5rem .1rem;
-    background: $white;
-    border-radius: 8px;
-    border: 1px solid #ebebeb;
-    box-shadow: 0 0 10px rgb(0 0 0 / 8%);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    appearance: none;
-
-    &:hover {
-        opacity: 1;
-        visibility: visible;
-    }
-
-}
-
-.user_info {
-    display: grid;
-    place-items: center;
-}
-
 .user_btn {
     height: 30px;
     width: 30px;
@@ -53,67 +22,5 @@
     &:hover+.user_box {
         opacity: 1;
         visibility: visible;
-    }
-}
-
-.user_loged_out {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: .5rem;
-    align-items: center;
-    width: 100%;
-    height: min-content;
-
-}
-
-.user_btns {
-    @include flexCenterColumn;
-    gap: 1rem;
-    width: 80%;
-
-    a {
-        width: 100%;
-    }
-
-    button:last-child {
-        border: none;
-
-        &:hover {
-            color: $mainColor;
-            background-color: transparent;
-        }
-    }
-}
-
-.user_login_btn,
-.new_user_btn {
-    @include small_button;
-    padding: .5rem;
-    color: $white;
-}
-
-.my_account_btn,
-.logout_btn {
-    width: 100px;
-    background-color: transparent;
-    padding: .5rem;
-    border: none;
-    border-radius: 10px;
-    color: $mainColor;
-
-    &:hover {
-        cursor: pointer;
-        background-color: rgb(220, 220, 220);
-        transition: all .3s ease-in-out;
-    }
-}
-
-.logout_btn {
-    background-color: $gray;
-
-    &:hover {
-        background-color: $gray;
-        transition: all .3s ease-in-out;
     }
 }

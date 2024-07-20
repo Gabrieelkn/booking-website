@@ -57,6 +57,7 @@
 
 .text {
     line-height: 1.1;
+    padding: .5rem;
 
     @media screen and (min-width:$laptop) {
         width: 35%;
@@ -105,7 +106,7 @@
     transition: all .3s ease-in-out;
 
     &:hover {
-        background-color: $gray;
+        background-color: $accentColor2;
         cursor: pointer;
         transition: all .3s ease-in-out;
     }

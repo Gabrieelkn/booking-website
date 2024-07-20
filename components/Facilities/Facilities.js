@@ -6,7 +6,7 @@ import { MdFamilyRestroom, MdOutlineFoodBank } from "react-icons/md";
 function Facility({ icon, text }) {
   return (
     <div className={styles.facility}>
-      {icon}
+      <i className={styles.icon}>{icon}</i>
       <p> {text}</p>
     </div>
   );

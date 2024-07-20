@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
 import NavigationBar from "../NavigationBar/NavigationBar";
 import Link from "next/link";
-import UserWidget from "../UserWidget/UserWidget";
+import UserIcon from "../UserIcon/UserIcon";
 
 function Header() {
   return (
@@ -12,7 +12,7 @@ function Header() {
             LOGO
           </Link>
           <NavigationBar />
-          <UserWidget />
+          <UserIcon />
         </div>
       </header>
     </>

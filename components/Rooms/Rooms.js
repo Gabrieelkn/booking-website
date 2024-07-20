@@ -38,7 +38,7 @@ export default async function Rooms() {
   return (
     <Container>
       <div id="rooms" className={styles.rooms}>
-        <h2>Rooms</h2>
+        <h2>Our facilities</h2>
         {rooms.length > 0 &&
           rooms.map((room, index) => <Room key={index} {...room} />)}
       </div>

@@ -1,0 +1,25 @@
+/* Color */
+/* Font */
+/* Breakpoints */
+.icon {
+  width: 100%;
+  height: 100%;
+  color: #020203;
+}
+
+.user_btn {
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+  gap: 0.4rem;
+  position: relative;
+  order: 2;
+}
+.user_btn:hover {
+  cursor: pointer;
+}
+.user_btn:hover + .user_box {
+  opacity: 1;
+  visibility: visible;
+}/*# sourceMappingURL=styles.module.css.map */

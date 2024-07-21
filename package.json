@@ -10,18 +10,21 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
+    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/stripe-js": "^4.1.0",
     "@supabase/ssr": "^0.0.10",
     "@supabase/supabase-js": "^2.39.2",
     "antd": "^5.12.8",
     "date-fns": "^3.1.0",
-    "next": "14.0.4",
+    "next": "^14.0.4",
     "react": "^18",
     "react-date-range": "^2.0.0-alpha.4",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.12.0",
     "react-redux": "^9.0.4",
-    "sass": "^1.69.6"
+    "sass": "^1.69.6",
+    "stripe": "^16.2.0"
   },
   "devDependencies": {
     "eslint": "^8",

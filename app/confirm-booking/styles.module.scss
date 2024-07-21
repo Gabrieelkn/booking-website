@@ -27,6 +27,8 @@
 }
 
 .button {
+    display: grid;
+    place-content: center;
     @include button;
     width: 95%;
     height: 7.5vh;

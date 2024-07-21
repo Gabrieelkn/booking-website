@@ -1,13 +1,13 @@
 "use client";
 import { useEffect } from "react";
-import styles from "./confirm-booking.module.css";
+import styles from "./styles.module.css";
 import { useBooking } from "@/context/BookingContext";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import supabase from "@/utills/supabaseClient";
 
-export default function Payment() {
+export default function ConfirmBooking() {
   const { startDate, endDate, price, formValues, room } = useBooking();
   const currentUser = useSelector((state) => state.currentUser);
   const router = useRouter();
@@ -46,7 +46,7 @@ export default function Payment() {
     toast.success("Your request was succesful");
 
     if (currentUser) {
-      router.push("/account/bookings");
+      router.push("/confirm-booking/checkout");
     } else {
       router.push("/");
     }
@@ -92,7 +92,7 @@ export default function Payment() {
           </p>
         </div>
         <button onClick={handleConfirm} className={styles.button}>
-          Confirm
+          Checkout
         </button>
       </div>
     </div>

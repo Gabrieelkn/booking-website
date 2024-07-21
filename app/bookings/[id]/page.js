@@ -157,7 +157,7 @@ export default function Room({ params }) {
                     bookingDays={bookingDays}
                   />
                   <button className={styles.login_btn} disabled={loading}>
-                    {loading ? "Loading..." : "Next"}
+                    {loading ? "Loading..." : "Checkout"}
                   </button>
                 </form>
               </div>

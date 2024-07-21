@@ -27,6 +27,8 @@
 }
 
 .button {
+  display: grid;
+  place-content: center;
   border-radius: 10px;
   background-color: #00A6FB;
   color: #020203;
@@ -49,4 +51,4 @@
   background-color: #D3D3D9;
   color: #020203;
   transition: all 0.5s ease-in-out;
-}/*# sourceMappingURL=confirm-booking.module.css.map */
+}/*# sourceMappingURL=styles.module.css.map */

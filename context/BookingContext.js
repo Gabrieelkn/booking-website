@@ -17,6 +17,8 @@ export function BookingProvider({ children }) {
     return "";
   });
 
+  console.log("rrom", room);
+
   const [endDate, setEndDate] = useState(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("endDate") || "";

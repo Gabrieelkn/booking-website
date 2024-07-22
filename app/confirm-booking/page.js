@@ -28,8 +28,6 @@ export default function ConfirmBooking() {
           user_id: currentUser ? currentUser.id : null,
           name: formValues.name,
           email: formValues.email,
-          address: formValues.address,
-          city: formValues.city,
           phone: parseFloat(formValues.phone, 10),
           guests: parseFloat(formValues.guests, 10),
           children: parseFloat(formValues.children, 10),
@@ -43,7 +41,7 @@ export default function ConfirmBooking() {
       toast.error("Ups! Something happened");
       return null;
     }
-    toast.success("Your request was succesful");
+    toast.success("Redirecting to checkout page");
 
     if (currentUser) {
       router.push("/confirm-booking/checkout");
@@ -93,6 +91,9 @@ export default function ConfirmBooking() {
         </div>
         <button onClick={handleConfirm} className={styles.button}>
           Checkout
+        </button>
+        <button onClick={() => router.back()} className={styles.goBackButton}>
+          Edit details
         </button>
       </div>
     </div>

@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import supabase from "@/utills/supabaseClient";
 import { useSelector } from "react-redux";
-import Loading from "@/app/signup/loading";
+import Loading from "@/components/loader/Loader";
 import toast from "react-hot-toast";
 
 export default function MyBookings() {
@@ -42,7 +42,8 @@ export default function MyBookings() {
           )
         `
           )
-          .eq("user_id", currentUser.id);
+          .eq("user_id", currentUser.id)
+          .order("created_at", { ascending: false });
 
         if (data) {
           setBookings(data);

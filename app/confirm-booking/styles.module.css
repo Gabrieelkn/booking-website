@@ -14,7 +14,7 @@
 
 .box {
   background-color: #D3D3D9;
-  text-align: center;
+  text-align: start;
   border-radius: 10px;
   padding: 0.4rem;
   width: 95%;
@@ -26,7 +26,7 @@
   padding-bottom: 1rem;
 }
 
-.button {
+.button, .goBackButton {
   display: grid;
   place-content: center;
   border-radius: 10px;
@@ -46,9 +46,14 @@
   margin-right: auto;
   color: #eff6ee;
 }
-.button:hover {
+.button:hover, .goBackButton:hover {
   cursor: pointer;
   background-color: #D3D3D9;
   color: #020203;
   transition: all 0.5s ease-in-out;
+}
+
+.goBackButton {
+  background-color: #D3D3D9;
+  color: #020203;
 }/*# sourceMappingURL=styles.module.css.map */

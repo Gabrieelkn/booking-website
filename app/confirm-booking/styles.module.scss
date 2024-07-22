@@ -13,7 +13,7 @@
 
 .box {
     background-color: $gray;
-    text-align: center;
+    text-align: start;
     border-radius: 10px;
     padding: .4rem;
     width: 95%;
@@ -38,4 +38,10 @@
     margin-left: auto;
     margin-right: auto;
     color: $white;
+}
+
+.goBackButton {
+    @extend .button;
+    background-color: $gray;
+    color: $mainColor;
 }

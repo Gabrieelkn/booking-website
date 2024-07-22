@@ -35,22 +35,6 @@ export default function Room({ params }) {
     },
     {
       id: 2,
-      name: "address",
-      type: "text",
-      placeholder: "Address",
-      label: "Address",
-      required: true,
-    },
-    {
-      id: 3,
-      name: "city",
-      type: "text",
-      placeholder: "City",
-      label: "City",
-      required: true,
-    },
-    {
-      id: 4,
       name: "phone",
       type: "number",
       placeholder: "Phone",
@@ -58,7 +42,7 @@ export default function Room({ params }) {
       required: true,
     },
     {
-      id: 5,
+      id: 3,
       name: "email",
       type: "email",
       placeholder: "Email",
@@ -67,7 +51,7 @@ export default function Room({ params }) {
       required: true,
     },
     {
-      id: 6,
+      id: 4,
       name: "guests",
       type: "number",
       min: 1,
@@ -77,7 +61,7 @@ export default function Room({ params }) {
       required: true,
     },
     {
-      id: 7,
+      id: 5,
       name: "children",
       type: "number",
       min: 0,

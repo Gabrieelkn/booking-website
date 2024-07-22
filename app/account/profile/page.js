@@ -1,7 +1,7 @@
 "use client";
 import styles from "./profile.module.css";
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { setCurrentUser } from "@/utills/redux/features/currentUserSlice";
 import FormInput from "@/components/FormInput/FormInput";
 import supabase from "@/utills/supabaseClient";
@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 
 export default function UserInfo() {
   const currentUser = useSelector((state) => state.currentUser);
+  const dispatch = useDispatch();
   const router = useRouter();
   const [emailValue, setEmailValue] = useState("");
 
@@ -20,21 +21,21 @@ export default function UserInfo() {
   }, [currentUser]);
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-
-    setEmailValue(() => ({
-      [name]: value,
-    }));
+    console.log(emailValue);
+    setEmailValue(() => event.target.value);
   };
 
   const handleSaveEmail = async (e) => {
     e.preventDefault();
-    if (editValues.email) {
+    if (emailValue) {
       const { data, error } = await supabase.auth.updateUser({
         email: emailValue,
       });
-      router.refresh();
-      setCurrentUser(data);
+      if (!error) {
+        router.refresh();
+        toast.success("Email updated");
+        dispatch(setCurrentUser(data));
+      }
     }
   };
 

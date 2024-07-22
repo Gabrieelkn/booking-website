@@ -8,7 +8,7 @@ import {
   EmbeddedCheckoutProvider,
   EmbeddedCheckout,
 } from "@stripe/react-stripe-js";
-import { differenceInCalendarDays } from "date-fns";
+import { parse, differenceInCalendarDays } from "date-fns";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
@@ -18,8 +18,12 @@ export default function Checkout() {
   const { startDate, endDate, price, formValues, room } = useBooking();
   const currentUser = useSelector((state) => state.currentUser);
   const router = useRouter();
-  const bookingDays = differenceInCalendarDays(endDate, startDate) + 1;
+  const parseDate = (dateStr) => {
+    return dateStr ? parse(dateStr, "yyyy MM dd", new Date()) : new Date();
+  };
 
+  const bookingDays =
+    differenceInCalendarDays(parseDate(endDate), parseDate(startDate)) + 1;
   const fetchClientSecret = useCallback(() => {
     if (currentUser) {
       return fetch("/api/checkout_sessions", {

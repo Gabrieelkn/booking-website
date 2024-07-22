@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import FormInput from "@/components/FormInput/FormInput";
-import { differenceInCalendarDays } from "date-fns";
+import { parse, differenceInCalendarDays } from "date-fns";
 import Container from "@/components/container/container";
 
 export default function Room({ params }) {
@@ -22,7 +22,12 @@ export default function Room({ params }) {
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
-  const bookingDays = differenceInCalendarDays(endDate, startDate) + 1;
+  const parseDate = (dateStr) => {
+    return dateStr ? parse(dateStr, "yyyy MM dd", new Date()) : new Date();
+  };
+
+  const bookingDays =
+    differenceInCalendarDays(parseDate(endDate), parseDate(startDate)) + 1;
 
   const inputs = [
     {
@@ -153,17 +158,28 @@ export default function Room({ params }) {
 }
 
 function Price({ formValues, room, bookingDays }) {
+  if (!room) return null;
+
+  const roomPrice = Number(room.price) || 0;
+  const guests = Number(formValues.guests) || 0;
+  const children = Number(formValues.children) || 0;
+  const days = Number(bookingDays) || 0;
+
+  const totalPrice = (roomPrice * guests + (roomPrice / 2) * children) * days;
+
+  if (isNaN(totalPrice) || totalPrice === Infinity) {
+    console.error("Calculated totalPrice is not a valid number:", totalPrice);
+    return null;
+  }
+
   return (
     <div className={styles.priceWrapper}>
-      Price for {formValues.guests} {formValues.guests > 1 ? "guests" : "guest"}{" "}
-      {formValues.children != 0 ? `and ${formValues.children} children` : ""}{" "}
-      {bookingDays === 1 ? "for 1 day" : `for ${bookingDays} days`}
-      <b className={styles.price}>
-        {(room.price * formValues.guests +
-          (room.price / 2) * formValues.children) *
-          bookingDays}
-        $
-      </b>
+      <p>
+        {days} {days === 1 ? "day" : "days"}
+      </p>
+      Price for {guests} {guests > 1 ? "guests" : "guest"}{" "}
+      {children !== 0 ? `and ${children} children` : ""}
+      <b className={styles.price}>{totalPrice}$</b>
     </div>
   );
 }

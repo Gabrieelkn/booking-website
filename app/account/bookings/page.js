@@ -79,6 +79,10 @@ export default function MyBookings() {
                 </b>
               </h3>
               <p>
+                <b>Booked at: </b>
+                {new Date(booking.created_at).toLocaleString()}
+              </p>
+              <p>
                 <b>Check-in:</b> {booking.from}
               </p>
               <p>

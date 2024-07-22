@@ -47,7 +47,7 @@ export default function Checkout() {
   }, [room, router]);
 
   return (
-    <div st id="checkout">
+    <div style={{ marginTop: "10vh", background: "transparent" }} id="checkout">
       <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
         <EmbeddedCheckout />
       </EmbeddedCheckoutProvider>

@@ -1,14 +1,16 @@
 "use client";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import { useBooking } from "@/context/BookingContext";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import supabase from "@/utills/supabaseClient";
+import Loading from "@/components/loader/Loader";
 
 export default function ConfirmBooking() {
   const { startDate, endDate, price, formValues, room } = useBooking();
+  const [loading, setLoading] = useState(false);
   const currentUser = useSelector((state) => state.currentUser);
   const router = useRouter();
 
@@ -42,7 +44,7 @@ export default function ConfirmBooking() {
       return null;
     }
     toast.success("Redirecting to checkout page");
-
+    setLoading(true);
     if (currentUser) {
       router.push("/confirm-booking/checkout");
     } else {
@@ -50,6 +52,8 @@ export default function ConfirmBooking() {
     }
     return { data };
   };
+
+  loading && <Loading />;
 
   return (
     <div className={styles.booking}>
